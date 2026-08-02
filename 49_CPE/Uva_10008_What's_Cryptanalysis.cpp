@@ -19,19 +19,17 @@ int main(){
 	cin >> n;
 	cin.ignore();
 	
-	int count[26] = {0};
+	Letter arr[26];
+	for(int i = 0;i < 26;++i){
+		arr[i].alpha = i + 'A';
+		arr[i].cnt = 0;
+	}
 	
 	for(int i = 0;i < n;++i){
 		string s;
 		getline(cin, s);
 		
-		for(char c : s) if(isalpha(c)) ++count[toupper(c) - 'A'];
-	}
-	
-	Letter arr[26];
-	for(int i = 0;i < 26;++i){
-		arr[i].alpha = i + 'A';
-		arr[i].cnt = count[i];
+		for(char c : s) if(isalpha(c)) ++arr[toupper(c) - 'A'].cnt;
 	}
 	
 	sort(arr, arr + 26, cmp);
