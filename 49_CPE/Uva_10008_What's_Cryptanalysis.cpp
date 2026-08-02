@@ -8,7 +8,7 @@ struct Letter{
 
 bool cmp(Letter a, Letter b){
 	if(a.cnt != b.cnt) return a.cnt > b.cnt;
-	return a.cnt < b.cnt;
+	return a.alpha < b.alpha;
 }
 
 int main(){
@@ -25,13 +25,7 @@ int main(){
 		string s;
 		getline(cin, s);
 		
-		for(int j = 0;j < s.length();++j){
-			char c = s[j];
-			if(isalpha(c)){
-				c = toupper(c);
-				++count[c - 'A'];
-			}
-		}
+		for(char c : s) if(isalpha(c)) ++count[toupper(c) - 'A'];
 	}
 	
 	Letter arr[26];
@@ -42,8 +36,6 @@ int main(){
 	
 	sort(arr, arr + 26, cmp);
 	
-	for(int i = 0;i < 26;++i){
-		if(arr[i].cnt > 0) cout << arr[i].alpha << " " << arr[i].cnt << "\n";
-	}
+	for(int i = 0;i < 26;++i) if(arr[i].cnt > 0) cout << arr[i].alpha << " " << arr[i].cnt << "\n";
 	return 0;
 }
