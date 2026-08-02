@@ -2,38 +2,38 @@
 using namespace std;
 
 struct Letter{
-	char alpha;
-	int cnt;
+    char alpha;
+    int cnt;
 };
 
 bool cmp(Letter a, Letter b){
-	if(a.cnt != b.cnt) return a.cnt > b.cnt;
-	return a.alpha < b.alpha;
+    if(a.cnt != b.cnt) return a.cnt > b.cnt;
+    return a.alpha < b.alpha;
 }
 
 int main(){
-	ios::sync_with_stdio(false);
-	cin.tie(NULL);
-	
-	int n;
-	cin >> n;
-	cin.ignore();
-	
-	Letter arr[26];
-	for(int i = 0;i < 26;++i){
-		arr[i].alpha = i + 'A';
-		arr[i].cnt = 0;
-	}
-	
-	for(int i = 0;i < n;++i){
-		string s;
-		getline(cin, s);
-		
-		for(char c : s) if(isalpha(c)) ++arr[toupper(c) - 'A'].cnt;
-	}
-	
-	sort(arr, arr + 26, cmp);
-	
-	for(int i = 0;i < 26;++i) if(arr[i].cnt > 0) cout << arr[i].alpha << " " << arr[i].cnt << "\n";
-	return 0;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int n;
+    cin >> n;
+    cin.ignore();
+    
+    int count[26] = {0};
+    
+    for(int i = 0; i < n; ++i){
+        string s;
+        getline(cin, s);
+        
+        for(char c : s) if(isalpha(c)) ++count[toupper(c) - 'A'];
+    }
+    
+    vector<Letter> arr;
+    for(int i = 0; i < 26; ++i) if(count[i] > 0) arr.push_back({(char)(i + 'A'), count[i]});
+    
+    sort(arr.begin(), arr.end(), cmp);
+    
+    for(const auto& x : arr) cout << x.alpha << " " << x.cnt << "\n";
+    
+    return 0;
 }
