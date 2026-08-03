@@ -17,7 +17,7 @@ int main(){
     
     int n;
     cin >> n;
-    cin.ignore();
+    cin.ignore(10000, '\n'); 
     
     int count[26] = {0};
     
@@ -34,6 +34,5 @@ int main(){
     sort(arr.begin(), arr.end(), cmp);
     
     for(const auto& x : arr) cout << x.alpha << " " << x.cnt << "\n";
-    
     return 0;
 }
