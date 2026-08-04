@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int sum_digits(long long n){
+int sum_digits(int n){
     int sum = 0;
     while(n > 0){
         sum += n % 10;
