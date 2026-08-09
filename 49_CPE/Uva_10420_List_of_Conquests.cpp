@@ -15,7 +15,7 @@ int main(){
             
             ++record[country];
         }
-        for(auto x : record) cout << x.first << " " << x.second << "\n";
+        for(const auto& x : record) cout << x.first << " " << x.second << "\n";
     }
     return 0;
 }
