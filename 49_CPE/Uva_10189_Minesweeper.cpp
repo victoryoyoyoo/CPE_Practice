@@ -30,7 +30,7 @@ int main(){
                         int nx = i + dx[k];
                         int ny = j + dy[k];
                         
-                        if(nx >= 0 && nx < n && ny >= 0 && ny < m && grid[nx][ny] != '*') grid[nx][ny]++;
+                        if(nx >= 0 && nx < n && ny >= 0 && ny < m && grid[nx][ny] != '*') ++grid[nx][ny];
                     }
                 }
             }
