@@ -3,9 +3,9 @@ using namespace std;
 
 int sort_count(vector<int>& train){
     int count = 0, n = train.size();
-    for(int i = 0; i < n - 1; ++i){
+    for(int i = 0;i < n - 1;++i){
         bool swapped = false;
-        for(int j = 0; j < n - 1 - i; ++j){
+        for(int j = 0;j < n - 1 - i;++j){
             if(train[j] > train[j + 1]){
                 swap(train[j], train[j + 1]);
                 ++count;
@@ -27,7 +27,7 @@ int main(){
             int L;
             cin >> L;
             vector<int> train(L);
-            for(int i = 0; i < L; ++i) cin >> train[i]; 
+            for(int i = 0;i < L;++i) cin >> train[i]; 
             cout << "Optimal train swapping takes " << sort_count(train) << " swaps.\n";
         }
     }
