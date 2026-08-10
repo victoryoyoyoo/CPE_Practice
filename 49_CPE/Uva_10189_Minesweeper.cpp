@@ -16,17 +16,17 @@ int main(){
     while(cin >> n >> m && (n != 0 || m != 0)){
         if(field_count > 1) cout << "\n";
         
-        for(int i = 0; i < n;++i){
-            for(int j = 0; j < m;++j){
+        for(int i = 0;i < n;++i){
+            for(int j = 0;j < m;++j){
                 cin >> grid[i][j];
                 if(grid[i][j] == '.') grid[i][j] = '0'; 
             }
         }
         
-        for(int i = 0; i < n;++i){
-            for(int j = 0; j < m;++j){
+        for(int i = 0;i < n;++i){
+            for(int j = 0;j < m;++j){
                 if(grid[i][j] == '*'){
-                    for(int k = 0; k < 8;++k){
+                    for(int k = 0;k < 8;++k){
                         int nx = i + dx[k];
                         int ny = j + dy[k];
                         
@@ -36,8 +36,8 @@ int main(){
             }
         }
         cout << "Field #" << field_count << ":\n";
-        for(int i = 0; i < n;++i){
-            for(int j = 0; j < m;++j) cout << grid[i][j];
+        for(int i = 0;i < n;++i){
+            for(int j = 0;j < m;++j) cout << grid[i][j];
             cout << "\n";
         }
         ++field_count;
