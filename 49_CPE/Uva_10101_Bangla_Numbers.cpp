@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-long long divs[] = {10000000, 100000, 1000, 100};
+long long divs[] = {10000000, 100000, 1000, 100}; // int
 string units[] = {" kuti", " lakh", " hajar", " shata"};
 
 void solve(long long n){
