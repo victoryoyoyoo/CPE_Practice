@@ -5,7 +5,7 @@ long long divs[] = {10000000, 100000, 1000, 100};
 string units[] = {" kuti", " lakh", " hajar", " shata"};
 
 void solve(long long n){
-    for(int i = 0; i < 4; i++){
+    for(int i = 0; i < 4;++i){
         if(n >= divs[i]){
         	solve(n / divs[i]);
             cout << units[i];
