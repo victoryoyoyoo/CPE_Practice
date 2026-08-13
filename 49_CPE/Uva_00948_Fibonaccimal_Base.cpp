@@ -34,7 +34,7 @@ int main(){
             string s = "";
             cout << original_n << " = ";
             
-            for(int i = j; i >= 0; --i){
+            for(int i = j;i >= 0;--i){
                 if(n >= fib[i]){
                     n -= fib[i];
                     cout << "1";
