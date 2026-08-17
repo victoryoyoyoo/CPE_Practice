@@ -1,6 +1,6 @@
 # CPE Practice
 
-個人在 UVa Online Judge 上的刷題紀錄，持續更新中，主要練習演算法基礎與 C++（快速 I/O、`bits/stdc++.h`、常見資料結構）。
+在 UVa Online Judge 上的刷題紀錄，持續更新中，主要練習演算法基礎與 C++（快速 I/O、`bits/stdc++.h`、常見資料結構）。
 
 ## 資料夾結構
 
