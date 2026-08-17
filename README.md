@@ -1,11 +1,11 @@
 # CPE Practice
 
-個人在 UVa Online Judge 上的刷題紀錄，主要練習演算法基礎與 C++ 競賽寫法（快速 I/O、`bits/stdc++.h`、常見資料結構）。目前共 49 題，全部收在 `49_CPE/` 資料夾，檔名格式為 `Uva_[題號]_[題目名稱].cpp`。
+個人在 UVa Online Judge 上的刷題紀錄，主要練習演算法基礎與 C++（快速 I/O、`bits/stdc++.h`、常見資料結構）。目前共 49 題，全部收在 `49_CPE/` 資料夾，檔名格式為 `Uva_[題號]_[題目名稱].cpp`。
 
 ## 環境
 
 * C++17
-* 開發／測試：Dev-C++、Code::Blocks
+* 開發／測試：Dev-C++
 * 編譯範例：
   ```
   g++ -O2 -std=c++17 -o solution Uva_00100_The_3n+1_problem.cpp
