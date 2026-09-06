@@ -1,28 +1,15 @@
 # CPE Practice
 
-在 UVa Online Judge 上的刷題紀錄，持續更新中，主要練習演算法基礎與 C++（快速 I/O、`bits/stdc++.h`、常見資料結構）。
+Solutions to UVa Online Judge problems, mainly for practicing basic algorithms and C++.
 
-## 資料夾結構
+`49_CPE/` holds the basic training problems. Past exam problems will go into a separate folder later instead of being mixed in here.
 
-* `49_CPE/`：訓練用的基礎題目
-* 之後會加入歷屆考古題，之後會另外開資料夾放，不會全部塞在同一個資料夾裡
+Filenames follow `Uva_[problem number]_[title].cpp`, and the number matches the official one on [UVa Online Judge](https://onlinejudge.org/), so you can look up the original problem directly.
 
-## 檔名規則
+Dev-C++, C++17. Compiling looks roughly like this:
 
 ```
-Uva_[題號]_[題目名稱].cpp
+g++ -O2 -std=c++17 -o solution Uva_00100_The_3n+1_problem.cpp
 ```
-題號對應 [UVa Online Judge](https://onlinejudge.org/) 的官方編號，可以直接拿題號去查原題。
 
-## 環境
-
-* C++17
-* 開發／測試：Dev-C++
-* 編譯範例：
-  ```
-  g++ -O2 -std=c++17 -o solution Uva_00100_The_3n+1_problem.cpp
-  ```
-
-## 說明
-
-這些解法是練習用，以「解出來、通過測資」為主，沒有特別追求最佳寫法，部分題目之後可能會回來重寫。
+These are practice solutions - getting accepted is the goal, not writing the cleanest code. Some of them might get rewritten later.
