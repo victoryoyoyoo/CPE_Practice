@@ -23,4 +23,3 @@ int main(){
 	return 0;
 }
 
-// 1/10 Monday 1/3 Monday 1/1 Saturday
